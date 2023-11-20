@@ -39,7 +39,7 @@ Once it's installed, you'll need to edit a few config files. All of these files 
 
 1. Open the named.conf.local file and add the following entries:
    ```sudo nano /etc/bind/named.conf.local```
-1. Create a TLS entry specific for CloudFlare **outside of the options section**:
+1. Create a TLS block[^1] specific for CloudFlare **outside of the options section**:
 ```
    tls cloudflare-dot {
     ca-file "/etc/ssl/certs/DigiCert_TLS_ECC_P384_Root_G5.pem";
@@ -89,6 +89,6 @@ My test lab server is at 10.0.100.5, as you can see 1.0.0.1 and my server are co
 
 ## Footnotes
 
-[^1] Reference link to BIND 9.19 Documentation for DoT
+[^1] [Reference link to BIND 9.19 Documentation for DoT](https://bind9.readthedocs.io/en/latest/reference.html#tls-block-grammar)
 
 [^2] Reference link to changing repos to testing stream
