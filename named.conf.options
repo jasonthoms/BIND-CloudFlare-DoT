@@ -1,3 +1,5 @@
+// This is an example DoT Forwarding config for BIND 9.19
+
 tls cloudflare-dot {
     ca-file "/etc/ssl/certs/DigiCert_TLS_ECC_P384_Root_G5.pem";
     remote-hostname "one.one.one.one";
