@@ -12,7 +12,7 @@ The second step is to **encrypt** your DNS traffic so the ISP isn't gathering yo
 * Virtual machine running Debian 12, 1 core, 1GB of RAM, 16GB of storage, 1 NIC
 * Debian configured with testing repositories to get BIND9.19.x
 
-## Setting the repositories to the Development
+## Setting the repositories to the Development[^1]
 1. Make sure you're up to date by simply running ```apt update && apt upgrade -y```
 2. To change the repos, run ```apt edit-sources``` and select an editor, use nano unless you've installed other editors.
 3. In nano, type
@@ -39,7 +39,7 @@ Once it's installed, you'll need to edit a few config files. All of these files 
 
 1. Open the named.conf.local file and add the following entries:
    ```sudo nano /etc/bind/named.conf.local```
-1. Create a TLS block[^1] specific for CloudFlare **outside of the options section**:
+1. Create a TLS block[^2] specific for CloudFlare **outside of the options section**:
 ```
    tls cloudflare-dot {
     ca-file "/etc/ssl/certs/DigiCert_TLS_ECC_P384_Root_G5.pem";
@@ -89,6 +89,8 @@ My test lab server is at 10.0.100.5, as you can see 1.0.0.1 and my server are co
 
 ## Footnotes
 
-[^1]: [Reference link to BIND 9.19 Documentation for DoT](https://bind9.readthedocs.io/en/latest/reference.html#tls-block-grammar)
 
-[^2]: [Reference link to changing repos to testing stream](https://linuxiac.com/how-to-switch-from-debian-stable-to-testing/)
+
+[^1]: [Reference link to changing repos to testing stream](https://linuxiac.com/how-to-switch-from-debian-stable-to-testing/)
+
+[^2]: [Reference link to BIND 9.19 Documentation for DoT](https://bind9.readthedocs.io/en/latest/reference.html#tls-block-grammar)
