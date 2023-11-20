@@ -9,13 +9,13 @@ Configure Bind 9.19 to query CloudFlare using DNS over TLS
 1. Make sure you're up to date by simply running apt update && apt upgrade -y
 2. To change the repos, run apt edit-sources and select an editor, use nano unless you've installed other editors.
 3. In nano, type
- 1.  **alt+r** 
- 1. **enter**
- 1. ```bookworm```
- 1. **enter**
- 1. **testing**
- 1. **enter**
- 1. **A**
+ *  **alt+r** 
+ * **enter**
+ * ```bookworm```
+ * **enter**
+ * **testing**
+ * **enter**
+ * **A**
 4. All the repos should be changed to testing now. **CTRL+X, Y** to write it to file
 5. Run ```sudo apt update && upgrade -y```
 6. When you see the change log simply type Q to exit to allow the install to continue.
