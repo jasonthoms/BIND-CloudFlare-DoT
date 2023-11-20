@@ -6,8 +6,8 @@ Configure Bind 9.19 to query CloudFlare using DNS over TLS
 * Debian configured with testing repositories to get BIND9.19.x
 
 ## Setting the repositories to the Development
-1. Make sure you're up to date by simply running apt update && apt upgrade -y
-2. To change the repos, run apt edit-sources and select an editor, use nano unless you've installed other editors.
+1. Make sure you're up to date by simply running ```apt update && apt upgrade -y```
+2. To change the repos, run ```apt edit-sources``` and select an editor, use nano unless you've installed other editors.
 3. In nano, type
  *  **alt+r** 
  * **enter**
@@ -22,13 +22,18 @@ Configure Bind 9.19 to query CloudFlare using DNS over TLS
 
 ## Installing Bind 9.19
 
-Now install Bind, run the commdn apt install bind9 and verify the version shows 9.19.x
+Now install Bind, run the command ```apt install bind9``` and verify the version shows **9.19.x**
 
-Once it's installed, you'll need to edit a few config files. All of these files will be located in /etc/bind/
+Once it's installed, you'll need to edit a few config files. All of these files will be located in ```/etc/bind/```
 
-I was lazy and included all the config in named.conf.local but you could create a new file for the TLS configuration and call it from named.conf. At some point CloudFlare is going to change their certificate and you'll need to update the config.
+> [!NOTE]
+> I was lazy and included all the config in named.conf.local but you could create a new file for the TLS configuration and call it from named.conf.
+> At some point CloudFlare is going to change their certificate and you'll need to update the config.
+> For Automation, it may be easier to seperate them out in their own files. 
 
-1. Create a TLS entry specific for CloudFlare:
+1. Open the named.conf.local file and add the following entries:
+   ```sudo nano /etc/bind/named.conf.local```
+1. Create a TLS entry specific for CloudFlare **outside of the options section**:
 ```
    tls cloudflare-dot {
     ca-file "/etc/ssl/certs/DigiCert_TLS_ECC_P384_Root_G5.pem";
