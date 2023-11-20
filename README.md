@@ -89,6 +89,6 @@ My test lab server is at 10.0.100.5, as you can see 1.0.0.1 and my server are co
 
 ## Footnotes
 
-[^1] [Reference link to BIND 9.19 Documentation for DoT](https://bind9.readthedocs.io/en/latest/reference.html#tls-block-grammar)
+[^1]: [Reference link to BIND 9.19 Documentation for DoT](https://bind9.readthedocs.io/en/latest/reference.html#tls-block-grammar)
 
-[^2] Reference link to changing repos to testing stream
+[^2]: [Reference link to changing repos to testing stream](https://linuxiac.com/how-to-switch-from-debian-stable-to-testing/)
