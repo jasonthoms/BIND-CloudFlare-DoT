@@ -13,6 +13,11 @@ The second step is to **encrypt** your DNS traffic so the ISP isn't gathering yo
 * Debian configured with testing repositories to get BIND9.19.x
 
 ## Setting the repositories to the Development[^1]
+
+> [!IMPORTANT]
+> It is assumed you are operating as the root account on a Debian 12 server.
+> If you're not root - you may need to install sudo, add yourself to the sudoers list, and prempt these commands with sudo to execute them as root.
+
 1. Make sure you're up to date by simply running ```apt update && apt upgrade -y```
 2. To change the repos, run ```apt edit-sources``` and select an editor, use nano unless you've installed other editors.
 3. In nano, type
@@ -23,7 +28,7 @@ The second step is to **encrypt** your DNS traffic so the ISP isn't gathering yo
  * **enter**
  * **A**
 4. All the repos should be changed to testing now. **CTRL+X, Y** to write it to file
-5. Run ```sudo apt update && upgrade -y```
+5. Run ```apt update && upgrade -y```
 6. When you see the change log simply type Q to exit to allow the install to continue.
 
 ## Installing Bind 9.19
