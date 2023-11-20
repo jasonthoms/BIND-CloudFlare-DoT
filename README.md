@@ -17,7 +17,6 @@ The second step is to **encrypt** your DNS traffic so the ISP isn't gathering yo
 2. To change the repos, run ```apt edit-sources``` and select an editor, use nano unless you've installed other editors.
 3. In nano, type
  *  **alt+r** 
- * **enter**
  * ```bookworm```
  * **enter**
  * ```testing```
