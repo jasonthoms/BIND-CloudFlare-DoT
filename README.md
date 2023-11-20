@@ -33,9 +33,9 @@ Now install Bind, run the command ```apt install bind9``` and verify the version
 Once it's installed, you'll need to edit a few config files. All of these files will be located in ```/etc/bind/```
 
 > [!NOTE]
-> I was lazy and included all the config in named.conf.local but you could create a new file for the TLS configuration and call it from named.conf.
+> I was lazy and included all the config in ```named.conf.local``` but you could create a new file for the TLS configuration and call it from ```named.conf```.
 > At some point CloudFlare is going to change their certificate and you'll need to update the config.
-> For Automation, it may be easier to seperate them out in their own files. 
+> For automation, it may be easier to seperate them out in their own files. 
 
 1. Open the named.conf.local file and add the following entries:
    ```sudo nano /etc/bind/named.conf.local```
