@@ -13,7 +13,7 @@ Configure Bind 9.19 to query CloudFlare using DNS over TLS
  * **enter**
  * ```bookworm```
  * **enter**
- * **testing**
+ * ```testing```
  * **enter**
  * **A**
 4. All the repos should be changed to testing now. **CTRL+X, Y** to write it to file
