@@ -3,7 +3,7 @@ Configure Bind 9.19 to forward DNS queries to CloudFlare using DNS over TLS to e
 
 Why? Because your DNS traffic is a valuable insight into your internet usage and as we've started to see more and more companies monetise your data - your ISP may have gotten into collecting and selling your data. 
 
-First step is to stop using the ISP's DNS servers by simply changing to a trusted public entity that makes their money elsewhere and has a solid privacy policy like Cloudflare. 
+First step is to stop using the ISP's DNS servers by simply changing to a trusted public entity that makes their money elsewhere and has a published [privacy policy like Cloudflare](https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/). 
    Changing your router's DNS server to 1.1.1.1 and 1.0.0.1 is a great first step. 
 
 The second step is to **encrypt** your DNS traffic so the ISP isn't gathering your data as it traverses their networks.
