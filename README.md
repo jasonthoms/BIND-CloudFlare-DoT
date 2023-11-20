@@ -1,5 +1,12 @@
 # BIND-CloudFlare-DoT
-Configure Bind 9.19 to query CloudFlare using DNS over TLS
+Configure Bind 9.19 to forward DNS queries to CloudFlare using DNS over TLS to encrypt the traffic as it leaves your network and traverses the internet. 
+
+Why? Because your DNS traffic is a valuable insight into your internet usage and as we've started to see more and more companies monetise your data - your ISP may have gotten into collecting and selling your data. 
+
+First step is to stop using the ISP's DNS servers by simply changing to a trusted public entity that makes their money elsewhere and has a solid privacy policy like Cloudflare. 
+   Changing your router's DNS server to 1.1.1.1 and 1.0.0.1 is a great first step. 
+
+The second step is to **encrypt** your DNS traffic so the ISP isn't gathering your data as it traverses their networks.
 
 ## Server Details
 * Virtual machine running Debian 12, 1 core, 1GB of RAM, 16GB of storage, 1 NIC
