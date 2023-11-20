@@ -1,0 +1,18 @@
+tls cloudflare-dot {
+    ca-file "/etc/ssl/certs/DigiCert_TLS_ECC_P384_Root_G5.pem";
+    remote-hostname "one.one.one.one";
+    ciphers "HIGH:!kRSA:!aNULL:!eNULL:!RC4:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS:!SHA1:!SHA256:!SHA384"; // or whatever you consider acceptable
+    prefer-server-ciphers yes;
+    session-tickets no;
+};
+
+options {
+	directory "/var/cache/bind";
+
+    forwarders port 853 tls cloudflare-dot {
+            1.1.1.1;
+            1.0.0.1;
+    };	
+	dnssec-validation auto;
+	listen-on { any; };
+};
